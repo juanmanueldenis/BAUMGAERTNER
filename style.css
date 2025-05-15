@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  background: #000;
+  overflow: hidden;
+}
+
+#menu {
+  text-align: center;
+  color: white;
+  background-color: #111;
+  padding: 40px;
+  height: 100vh;
+}
+
+#seleccion-personaje img {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+#seleccion-personaje img:hover {
+  transform: scale(1.1);
+}
+
+#seleccion-personaje img.seleccionado {
+  border-color: #0f0;
+}
+
+
+#game-container {
+  position: relative;
+  width: 1924px;
+  height: 911px;
+  margin: auto;
+  background-color: black;
+  overflow: hidden;
+}
+
+#mapa {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+#personaje {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50px;
+  left: 50px;
+  z-index: 2;
+}
+
+.casa {
+  position: absolute;
+  width: 110px;
+  height: 80px;
+  z-index: 1;
+}

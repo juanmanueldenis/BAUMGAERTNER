@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa Interactivo - Tu Banda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu">
+  <h1>Bienvenido al Mundo Baumgaertner</h1>
+  <p>Elegí tu personaje:</p>
+  <div id="seleccion-personaje">
+    <img src="assets/personajes/p1.png" class="opcion" data-personaje="p1.png">
+    <img src="assets/personajes/p2.png" class="opcion" data-personaje="p2.png">
+    <img src="assets/personajes/p3.png" class="opcion" data-personaje="p3.png">
+    <img src="assets/personajes/p4.png" class="opcion" data-personaje="p4.png">
+  </div>
+  <button id="empezar" disabled>Comenzar</button>
+</div>
+
+  <div id="game-container">
+    <img id="mapa" src="assets/fondo.png" alt="Mapa">
+    <img id="personaje" src="assets/personajes/p1.png" alt="Personaje">
+    <!-- Casas -->
+    <img class="casa" data-id="0" src="assets/casas/casa1.png" style="left: 300px; top: 303px;">
+    <img class="casa" data-id="1" src="assets/casas/casa2.png" style="left: 1456px; top: 260px;">
+    <img class="casa" data-id="1" src="assets/casas/casa3.png" style="left: 60px; top: 780px;">
+    <!-- Agregá más casas aquí -->
+  </div>
+
+  <audio id="musica" loop></audio>
+
+  <script src="main.js"></script>
+</body>
+</html>
