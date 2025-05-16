@@ -2,20 +2,29 @@ body {
   margin: 0;
   background: #000;
   overflow: hidden;
+  font-family: sans-serif;
 }
 
 #menu {
   text-align: center;
   color: white;
   background-color: #111;
-  padding: 40px;
+  padding: 5vh 2vw;
   height: 100vh;
+  box-sizing: border-box;
+}
+
+#seleccion-personaje {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 #seleccion-personaje img {
-  width: 200px;
-  height: 200px;
-  margin: 10px;
+  width: 25vw;
+  max-width: 200px;
+  height: auto;
   cursor: pointer;
   border: 3px solid transparent;
   border-radius: 10px;
@@ -30,12 +39,10 @@ body {
   border-color: #0f0;
 }
 
-
 #game-container {
   position: relative;
-  width: 1924px;
-  height: 911px;
-  margin: auto;
+  width: 100vw;
+  height: 100vh;
   background-color: black;
   overflow: hidden;
 }
@@ -45,20 +52,40 @@ body {
   height: 100%;
   position: absolute;
   z-index: 0;
+  object-fit: cover;
 }
 
 #personaje {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 50px;
-  left: 50px;
+  width: 5vw;
+  max-width: 100px;
+  height: auto;
+  top: 5%;
+  left: 5%;
   z-index: 2;
 }
 
 .casa {
   position: absolute;
-  width: 110px;
-  height: 80px;
+  width: 5vw;
+  max-width: 110px;
+  height: auto;
   z-index: 1;
+}
+
+/* Posiciones relativas para casas (solo ejemplo, podés usar JS para hacerlas dinámicas) */
+.casa[data-id="0"] { left: 15%; top: 30%; }
+.casa[data-id="1"]:nth-of-type(2) { left: 75%; top: 25%; }
+.casa[data-id="1"]:nth-of-type(3) { left: 5%; top: 70%; }
+
+/* Media queries para móviles */
+@media (max-width: 768px) {
+  #seleccion-personaje img {
+    width: 40vw;
+  }
+
+  #personaje,
+  .casa {
+    width: 10vw;
+  }
 }
