@@ -49,20 +49,16 @@ const dataCasas = [
   }
 ];
 
-let x = 50;
-let y = 50;
-const speed = 30;
+let x = 5;  // % en lugar de px
+let y = 5;
+const speed = 2; // porcentaje por tecla
 
 function mover(dx, dy) {
-  x += dx * speed;
-  y += dy * speed;
+  x = Math.max(0, Math.min(95, x + dx * speed));
+  y = Math.max(0, Math.min(95, y + dy * speed));
 
-  // Limites
-  x = Math.max(0, Math.min(1800, x));
-  y = Math.max(0, Math.min(850, y));
-
-  personaje.style.left = x + 'px';
-  personaje.style.top = y + 'px';
+  personaje.style.left = x + '%';
+  personaje.style.top = y + '%';
 
   verificarColision();
 }
