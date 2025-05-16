@@ -89,3 +89,6 @@ body {
     width: 10vw;
   }
 }
+#game-container {
+  display: none;
+}
